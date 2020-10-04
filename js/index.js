@@ -47,7 +47,7 @@ $(function() {
 			//return;
 			var v = g_viewing;
 			var p = getPage_byId(v.id);
-			var url = './php/api.php?id='+v.id+'&sid='+sid+'&url=&page=1';
+			var url = g_s_api+'/php/api.php?id='+v.id+'&sid='+sid+'&url=&page=1';
 			console.log(url);
 
 			var html = '';
@@ -111,7 +111,7 @@ var g_clipboard;
 }
 
 function viewList(id, sid, img = '', url = ''){
-	var get = './php/getPage.php?id='+id+'&url='+encodeURIComponent(url)+'&page=1';
+	var get = g_s_api+'/php/getPage.php?id='+id+'&url='+encodeURIComponent(url)+'&page=1';
 	console.log(get);
 
 	if(img == '') img = 'img/download.jpg';
@@ -268,7 +268,7 @@ function addHost(j){
 
 function loadData(){
 	if(true || g_s_md5 != g_v_config.md5){
-		$.getJSON('./php/web.json',  function(json, textStatus) {
+		$.getJSON(g_s_api+'/php/web.json',  function(json, textStatus) {
 			console.log('loadData!');
 			g_v_webs = json;
 			g_v_config.md5 = g_s_md5;
@@ -309,7 +309,7 @@ function loadPage(){
 	return;
 	var v = g_viewing;
 	var p = getPage_byId(v.id);
-	var url = './php/api.php?id='+v.id+'&sid='+p.sid+'&url='+p.url+'&page='+p.page;
+	var url = g_s_api+'/php/api.php?id='+v.id+'&sid='+p.sid+'&url='+p.url+'&page='+p.page;
 	console.log(url);
 
 	var img_loaded = 0;

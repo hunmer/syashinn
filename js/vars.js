@@ -1,4 +1,5 @@
-
+var g_s_api = '.';
+var g_s_api = 'https://neysummer-syashinn.glitch.me';
 var g_s_md5 = '11';
 var g_localKey = 'syashinn_';
 var _GET = getGETArray(window.location.search);
