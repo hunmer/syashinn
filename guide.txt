@@ -1,0 +1,9 @@
+loadPage 翻页
+loadData 更新web数据
+addHost 添加站点
+
+
+
+加载顺序
+
+loadData -> initData ->

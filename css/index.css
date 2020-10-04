@@ -1,0 +1,61 @@
+._card h2 {
+    display: block;
+    text-align: center;
+}
+
+.carousel-item img {
+	width: 200px;
+	height: 300px;
+}
+
+._card ._loading {
+	margin-top: 200px;
+}
+
+._card {
+	height: 500px;
+	margin-bottom: 25px;
+}
+
+._album {
+	/*width: 80%;*/
+	/*height: 400px;*/
+	margin: 0px auto;
+	display: block;
+}
+
+._active {
+	border: 2px solid red;
+}
+
+.header_image {
+	width: 100%;
+	height: 100%;
+}
+
+.view_content {
+	margin-top: 50px;
+}
+
+.view_content img {
+	/*height: 500px;
+	width: 250px;*/
+	margin-bottom: 10px;
+}
+
+._manu_btn {
+	position: absolute;
+	/*font-size: 2em !important;*/
+    top: 8px;
+}
+
+._p_right {
+	right: 0px;
+	margin-right: 15px;
+}
+
+._p_left {
+	left: 0px;
+	margin-left: 15px;
+
+}

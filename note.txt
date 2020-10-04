@@ -1,0 +1,73 @@
+airenzhe -> albumurl加.html
+
+不能使用:
+	"id": "38",
+http://uclj50.com/page/1.html
+
+	47 http://htu4.com/zipai
+	65 m.meitulu
+	67 http://girl-atlas.nettag/57653d1558e03930fbb7e4e6?p=1
+	68 www.yun993.netc/6/list_6_1.html
+	80 gtmm.net
+	83 https://www.feizl.commeinv/xinggan/defaultp1.htm
+	85 https://www.ccrtcc.cc/
+	143	mlxrl.com
+	208 https://www.wsgxo.comg-55-1.html
+	218 https://www.tutudao.netc/3/list_3_1.html
+	236 https://di81.com/PicList/?typeid=6&pageindex=1
+	239 https://smtmm.win/1	
+	242 http://www.h666.net/c/xinggan/1
+	243 https://www.xsnvshen.com/album/t108/?p=1
+	284 https://hanpig.com/
+"id": "342",
+https://utu8.com/index.php/art/show/id/6/page/1.html
+"id": "355",
+https://www.tuaoo.xyz/category-1_1.html
+
+
+"id": "307",
+https://www.zj005.com/hgmv
+
+"id": "309",
+http://www.duitoo.com/rentiyishu
+
+SSL问题:
+	80 www.gtmm.ne
+
+连接太慢:
+	41 http://www.5ikantu.org
+	96	http://meinv.aixiues.com/weimei/
+	"id": "13",
+https://tu.heiguang.comworks/11.html?page=1
+
+无法解析:
+	177 http://www.3764.net
+
+浏览器可以访问,却爬不了:
+ 	249 www.xgrtys.com
+ 	51 girlsky
+
+ 被跳转:
+ 	"id": "9",
+http://www.airenzhe.com/guonei.html
+"id": "14",
+http://www.meitu131.com/hot/etagid51-1.html
+"id": "16",
+http://www.fenmr.com/nd/list_4_1.html
+"id": "17",
+http://www.meituba.com/xinggan/list81.html
+
+找不到标题:
+	airenzhe
+	mmonly
+
+有的不显示:
+	"id": "329" https://www.xixirt.org/dadanrentiyishu
+	"id": "335",
+https://www.45xm.com/rttp
+"id": "7",
+http://m.mmonly.cc/mmtp/xgmn/list_10_1.html
+
+不符合:
+"id": "285",
+https://8x2298x.com/html/category/video/video1/page_1.html

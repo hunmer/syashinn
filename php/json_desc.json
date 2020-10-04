@@ -1,0 +1,132 @@
+{
+	"imgrule": {
+    	"r": true, // 是否设置来源
+    	"t": "end", // 页数替换方式, end , replace
+    	"s": "/{0}", // 替换的字符串
+    	"s": [".html", "_{0}.html"],
+        "num": 5, // 没有图片数但有页数,估计每页的图片数量 
+
+
+    	"p": { // 获取所有图片的参数
+    		"t": "replace", // 图片文件名替换方式
+    		"f": [-6, "{0}.jpg"], // [0]为数字则向后取文本
+    		"l": 3, // 图片序号最少位数, (前面加0)
+    		"s": 1, // 图片的开始序号 (0或者1)
+    	}, 
+    	"p": {// 获取所有图片的参数
+        		"t": "end", // 替换最后 
+        		"f": "{0}.jpg",
+        		"l": 3,
+        		"s": 0
+        	}, 
+
+        "p": {
+	    		"t": "replace",
+	    		"f": [-6, "{0}.jpg"],
+	    		"l": 2,
+	    		"s": 1,
+	    	}, 
+
+        "m": [".imageset-sum->text", "/ "],
+        "m": [".imageset-sum->text", [",", "."]],
+    	"m": ".dots->next_sibling->span->text",
+        "m": [".info->a->text", ["getText", "/", ")"]],
+        "m": [".page->-1->a->attr-href", ["getText", "_", "."]]
+        
+
+    	"f": "", // 第一个默认规则
+    	--------------------------------
+    	 // 结果处理
+    	"res": {
+        	"cover": [{
+        		"t": "replace",
+        		"f": ["_s", ""]
+        	}]
+        },
+
+         "res": {
+        	"cover": [{
+        		"m": true, // 打开的话则替换之前保存这些略缩图
+        		"t": "replace",
+        		"f": [[":","'", " ", "\""], ""]
+        	}]
+        },
+        ---------------------------------
+         "imgrule": {
+        	"t": "replace",
+        	"s": [".html", "_{0}.html"],
+        	"f": "",
+        	"m": [".article_page->a->text", ["共", "页:"]]
+        },
+        "m": [".page->-1->a->attr-href", ["getText", "_", "."]]
+
+
+        // 规则图片
+        "imgrule": {
+        	"p": {
+	    		"t": "replace",
+	    		"f": [-6, "{0}.jpg"],
+	    		"l": 2,
+	    		"s": 1
+	    	}
+        },
+
+         "imgrule": {
+            "t": "join",
+            "s": "{0}.html",
+            "f": "",
+            "m": ["getText", "共", "页"]
+        },
+
+        "imgrule": {
+            "t": "replace",
+             "s": [".html", "_{0}.html"],
+            "f": "",
+            "m": ["getText", "共", "页"]
+        },
+
+        "m": [".pagination->a->text", ["getNumber", -1]]
+
+    },
+
+    "curl": {
+    	"proxy": true
+    },
+
+    "elephtotolist": ["getText_Array", "downloadUrl", ","], // 字符串取出数组
+
+     "curl": {
+    	"enable": false, // 使用file_get_content
+    },
+
+     "children": { // 子目录下的自定义规则,如果没有设置则使用默认
+
+
+     	// 最后一页的图片获取方案
+     	"res": {
+        		"elephtotolist": ".swiper-slide->img",
+        		"eleimgsrc": "img->attr->src"
+        	}
+    },
+
+     "children": {
+        "res": {
+                "elephtotolist": ".swiper-slide->img",
+                "eleimgsrc": "img->attr->src"
+            }
+    },
+
+    // 列表替换
+    "res_album": {
+    	// 可数组可不数组
+    	"url": [{
+    		"t": "replace",
+    		"f": ["/pcbz/", "/showinfo-1-"]
+    	}, {
+    		"t": "replace",
+    		"f": [".html", "-1.html"]
+    	}]
+    },
+}
+
+
