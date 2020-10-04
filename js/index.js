@@ -268,7 +268,7 @@ function addHost(j){
 
 function loadData(){
 	if(true || g_s_md5 != g_v_config.md5){
-		$.getJSON(g_s_api+'/php/web.json',  function(json, textStatus) {
+		$.getJSON('./php/web.json',  function(json, textStatus) {
 			console.log('loadData!');
 			g_v_webs = json;
 			g_v_config.md5 = g_s_md5;
