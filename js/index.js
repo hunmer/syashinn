@@ -47,7 +47,7 @@ $(function() {
 			//return;
 			var v = g_viewing;
 			var p = getPage_byId(v.id);
-			var url = g_s_api+'/php/api.php?id='+v.id+'&sid='+sid+'&url=&page=1';
+			var url = g_s_api+'api.php?id='+v.id+'&sid='+sid+'&url=&page=1';
 			console.log(url);
 
 			var html = '';
@@ -111,7 +111,7 @@ var g_clipboard;
 }
 
 function viewList(id, sid, img = '', url = ''){
-	var get = g_s_api+'/php/getPage.php?id='+id+'&url='+encodeURIComponent(url)+'&page=1';
+	var get = g_s_api+'getPage.php?id='+id+'&url='+encodeURIComponent(url)+'&page=1';
 	console.log(get);
 
 	if(img == '') img = 'img/download.jpg';
@@ -309,7 +309,7 @@ function loadPage(){
 	return;
 	var v = g_viewing;
 	var p = getPage_byId(v.id);
-	var url = g_s_api+'/php/api.php?id='+v.id+'&sid='+p.sid+'&url='+p.url+'&page='+p.page;
+	var url = g_s_api+'api.php?id='+v.id+'&sid='+p.sid+'&url='+p.url+'&page='+p.page;
 	console.log(url);
 
 	var img_loaded = 0;
